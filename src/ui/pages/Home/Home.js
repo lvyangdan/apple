@@ -9,7 +9,7 @@ class Home extends React.Component{
 	}
 	pick=(e)=>{
 		e.preventDefault();
-		store.dispatch({type:'PICK'})
+		this.props.dispatch({type:'PICK'})
 	}
 	render(){
 		return(
@@ -21,11 +21,13 @@ class Home extends React.Component{
 			</div>
 			<div className='item'>
 				<div><span>1号</span><button onClick={this.eat}>eat</button></div>
-				<div><span>2号</span><button onClick={this.eat}>eat</button></div>
-				<div><span>3号</span><button onClick={this.eat}>eat</button></div>
 			</div>
 			<button onClick={this.pick}>pick apple</button>
 		</div>)
 	}
 }
-export default connect(null)(Home)
+const mapStateToProps=(state)=>{
+	countcurrent:state.countcurrent,
+	counteat:state.counteat
+}
+export default connect(mapStateToProps)(Home)
