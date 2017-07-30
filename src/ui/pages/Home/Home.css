@@ -1,0 +1,30 @@
+.pages{
+	width: 800px;
+	height: auto;
+	background-color: #BA68C8;
+	margin:0 auto;
+}
+.pages h1{
+	text-align: center;
+}
+.pages .state{
+	display: flex;
+	justify-content:space-between;
+}
+.pages .state span {
+	display: block;
+	width: 308px;
+	padding-left:30px;
+	border:1px dashed red;
+}
+.pages .item div{
+	border:1px solid pink;
+	display: flex;
+}
+.pages .item div span{
+	display: block;
+	width: 800PX;
+}
+.pages .item div button{
+	width: 200px;
+}
