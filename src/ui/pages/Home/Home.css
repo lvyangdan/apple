@@ -7,24 +7,26 @@
 .pages h1{
 	text-align: center;
 }
-.pages .state{
-	display: flex;
-	justify-content:space-between;
-}
 .pages .state span {
-	display: block;
-	width: 308px;
+	width: 200px;
 	padding-left:30px;
 	border:1px dashed red;
 }
 .pages .item div{
 	border:1px solid pink;
-	display: flex;
 }
 .pages .item div span{
+	float: left;
 	display: block;
 	width: 800PX;
 }
 .pages .item div button{
 	width: 200px;
+	display: block;
+	margin:0 auto;
+	float:right;
+}
+.pages img{
+	width: 100px;
+	height: 100px;
 }

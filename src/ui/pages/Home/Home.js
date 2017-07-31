@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import {connect} from 'react-redux'
 import store from '../../../redux/store'
+import img from './apple.jpg'
 class Home extends React.Component{
 	eat=(e)=>{
 		e.preventDefault();
@@ -9,25 +10,24 @@ class Home extends React.Component{
 	}
 	pick=(e)=>{
 		e.preventDefault();
-		this.props.dispatch({type:'PICK'})
+		store.dispatch({type:'PICK'})
 	}
 	render(){
 		return(
 		<div className="pages">
 			<h1>苹果篮子</h1>
 			<div className='state'>
-				当前：<span>1</span>
-				已吃掉：<span>1</span>
+				<img src={img} alt="apple"/>当前：<span>{this.props.count}</span>
 			</div>
 			<div className='item'>
-				<div><span>1号</span><button onClick={this.eat}>eat</button></div>
+				<div><button onClick={this.eat}>eat</button></div>
 			</div>
 			<button onClick={this.pick}>pick apple</button>
 		</div>)
 	}
 }
-const mapStateToProps=(state)=>{
-	countcurrent:state.countcurrent,
-	counteat:state.counteat
-}
+
+const mapStateToProps=(state) => ({
+	count: state.count
+})
 export default connect(mapStateToProps)(Home)
