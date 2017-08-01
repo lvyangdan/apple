@@ -6,7 +6,9 @@ import img from './apple.jpg'
 class Home extends React.Component{
 	eat=(e)=>{
 		e.preventDefault();
-		store.dispatch({type:'EAT'})
+		if(this.props.count.countNumber>=1){
+			store.dispatch({type:'EAT'})
+		}	
 	}
 	pick=(e)=>{
 		e.preventDefault();
@@ -17,7 +19,10 @@ class Home extends React.Component{
 		<div className="pages">
 			<h1>苹果篮子</h1>
 			<div className='state'>
-				<img src={img} alt="apple"/>当前：<span>{this.props.count}</span>
+				<img src={img} alt="apple"/>
+				<span>总数：{this.props.count.countNumber}</span>
+				<span>吃掉：{this.props.count.countEat}</span>
+				<span>采摘：{this.props.count.countPick}</span>
 			</div>
 			<div className='item'>
 				<div><button onClick={this.eat}>eat</button></div>
@@ -28,6 +33,7 @@ class Home extends React.Component{
 }
 
 const mapStateToProps=(state) => ({
-	count: state.count
+	count:state.count
 })
+
 export default connect(mapStateToProps)(Home)

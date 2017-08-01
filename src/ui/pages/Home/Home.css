@@ -1,5 +1,8 @@
+body{
+	font-size:20px;
+}
 .pages{
-	width: 800px;
+	width: 500px;
 	height: auto;
 	background-color: #BA68C8;
 	margin:0 auto;
@@ -7,21 +10,19 @@
 .pages h1{
 	text-align: center;
 }
-.pages .state span {
-	width: 200px;
-	padding-left:30px;
-	border:1px dashed red;
+.pages .state{
+	display: flex;
+	justify-content: space-between;
 }
-.pages .item div{
-	border:1px solid pink;
-}
-.pages .item div span{
-	float: left;
+.pages .state span{
 	display: block;
-	width: 800PX;
+	width: 100px;
+	line-height: 100px;
+	padding-left:30px;
 }
 .pages .item div button{
-	width: 200px;
+	line-height: 20px;
+	width: 100px;
 	display: block;
 	margin:0 auto;
 	float:right;
