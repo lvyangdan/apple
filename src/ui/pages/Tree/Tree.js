@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import store from '../../../redux/store';
 import TitleHeader from '../../shared/TitleHeader/TitleHeader';
 import {Link} from 'react-router-dom';
-import './tree.css'
+import './tree.css';
 class Tree extends React.Component{
 	pick=(e)=>{
 		e.preventDefault()

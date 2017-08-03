@@ -1,11 +1,13 @@
 import React from 'react';
 import TitleHeader from '../../shared/TitleHeader/TitleHeader';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import store from '../../../redux/store'
 class Market extends React.Component{
 	render(){
+		console.log(this.props.count)
 		return(<div className='market'>
 			<TitleHeader/>
-			<p>苹果换钱：{this.props.count/10}</p>
+			<p>苹果换钱：</p>
 		</div>)
 	}
 }
