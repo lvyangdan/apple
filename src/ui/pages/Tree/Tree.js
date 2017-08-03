@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import store from '../../../redux/store';
-import TitleHeader from '../../shared/TitleHeader/TitleHeader'
+import TitleHeader from '../../shared/TitleHeader/TitleHeader';
+import {Link} from 'react-router-dom';
 import './tree.css'
 class Tree extends React.Component{
 	pick=(e)=>{
@@ -13,6 +14,7 @@ class Tree extends React.Component{
 			<TitleHeader/>
 			<p>当前果树的苹果数目：{this.props.tree.appleCount}</p>
 			<button onClick={this.pick}>pick</button>
+			<Link to='/market'>去市场</Link>
 		</div>)
 	}
 }
