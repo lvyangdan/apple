@@ -1,6 +1,7 @@
 import React from 'react';
 import TitleHeader from '../../shared/TitleHeader/TitleHeader';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import store from '../../../redux/store';
 import img1 from './marketimg/apple1.jpg';
 import img2 from './marketimg/apple2.jpg';
@@ -19,7 +20,9 @@ class Market extends React.Component{
 			<img src={img2} alt=""/>
 			<img src={img3} alt=""/>
 			<p>你拥有的苹果：{this.props.count.countNumber}</p>
+			<p>交易方式：10个/元</p>
 			<button onClick={this.deal}>确定交易</button>
+			<Link to='/supmarket'>go supmarket</Link>
 			<p>拥有的财富：{this.props.market.money}元</p>
 		</div>)
 	}
