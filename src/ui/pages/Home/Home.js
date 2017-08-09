@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import store from '../../../redux/store'
 import img from './apple.jpg'
 import {Link} from 'react-router-dom'
+import TitleHeader from '../../shared/TitleHeader/TitleHeader';
 class Home extends React.Component{
 	eat=(e)=>{
 		e.preventDefault();
@@ -13,19 +14,22 @@ class Home extends React.Component{
 	}
 	pick=(e)=>{
 		e.preventDefault();
-		store.dispatch({type:'PICK'})
+		if(this.props.tree.appleCount>3){
+			store.dispatch({type:'PICK'})
+		}
+		
 	}
 	render(){
 		return(
 		<div className="pages">
-			<h1>苹果篮子</h1>
-			<div className='state'>
-				<Link to='/tree'><img src={img} alt="apple"/></Link>
-				<span>总数：{this.props.count.countNumber}</span>
-				<span>吃掉：{this.props.count.countEat}</span>
-				<span>采摘：{this.props.count.countPick}</span>
+			<TitleHeader title='apple basket'/>
+			<div className='state'>				
+				<span>你拥有的苹果数目：{this.props.count.countNumber}</span>
+				<span>劳动过程中吃掉数：{this.props.count.countEat}</span>
+				<span>劳动过程中采摘数：{this.props.count.countPick}</span>
+				<div>树上剩下：{this.props.tree.appleCount}</div>
 			</div>
-			<div>剩下：{this.props.tree.appleCount}</div>
+			<Link to='/tree'><img src={img} alt="apple"/></Link>
 			<div className='item'>
 				<div><button onClick={this.eat}>eat</button></div>
 			</div>

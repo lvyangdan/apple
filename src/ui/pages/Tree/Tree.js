@@ -11,11 +11,11 @@ class Tree extends React.Component{
 	}
 	render(){
 		return(<div className='tree'>
-			<TitleHeader/>
+			<TitleHeader title='production' url='/home'/>
 			<p>当前果树的苹果数目：{this.props.tree.appleCount}</p>
 			<p>我拥有的苹果：{this.props.count.countNumber}</p>
-			<button onClick={this.pick}>pick</button>
-			<Link to='/market'>去市场</Link>
+			<button onClick={this.pick}>pick apple</button>
+			<Link to='/market'>去市场交换财富</Link>
 		</div>)
 	}
 }

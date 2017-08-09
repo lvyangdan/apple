@@ -1,8 +1,9 @@
 body{
 	font-size:20px;
+	padding-right:10px;
 }
 .pages{
-	width: 500px;
+	width: 100%;
 	height: auto;
 	background-color: #BA68C8;
 	margin:0 auto;
@@ -16,8 +17,7 @@ body{
 }
 .pages .state span{
 	display: block;
-	width: 100px;
-	line-height: 100px;
+	width: 20%;
 	padding-left:30px;
 }
 .pages .item div button{

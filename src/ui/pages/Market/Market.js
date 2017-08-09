@@ -22,7 +22,7 @@ class Market extends React.Component{
 			<p>你拥有的苹果：{this.props.count.countNumber}</p>
 			<p>交易方式：10个/元</p>
 			<button onClick={this.deal}>确定交易</button>
-			<Link to='/supmarket'>go supmarket</Link>
+			<Link to='/supmarket'>go shopping</Link>
 			<p>拥有的财富：{this.props.market.money}元</p>
 		</div>)
 	}
