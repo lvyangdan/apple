@@ -2,7 +2,6 @@ import React from 'react';
 import './TitleHeader.css';
 import img from './apple.svg';
 import backimg from './back.svg';
-import {Link} from 'react-router-dom';
 const TitleHeader=({title})=>(
 	<div className='header'>
 		<h2>

@@ -20,6 +20,10 @@ body{
 	width: 20%;
 	padding-left:30px;
 }
+.pages .item div{
+	display: flex;
+	justify-content: space-between;
+}
 .pages .item div button{
 	line-height: 20px;
 	width: 100px;
@@ -28,6 +32,6 @@ body{
 	float:right;
 }
 .pages img{
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 }

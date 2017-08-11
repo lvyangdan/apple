@@ -30,8 +30,11 @@ class Home extends React.Component{
 				<div>树上剩下：{this.props.tree.appleCount}</div>
 			</div>
 			<Link to='/tree'><img src={img} alt="apple"/></Link>
+			<div><button onClick={this.eat}>eat</button></div>
 			<div className='item'>
-				<div><button onClick={this.eat}>eat</button></div>
+				
+				<div><Link to='tree'>去采摘苹果</Link></div>
+
 			</div>
 			<button onClick={this.pick}>pick apple</button>
 		</div>)

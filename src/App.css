@@ -3,3 +3,8 @@ a{
 	color:#6200EA;
 	font-size:16px;
 }
+body{
+	padding:0;
+	margin:0;
+	border:0;
+}
