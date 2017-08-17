@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import './Supmarket.css'
 import Shampoo1 from './goods/1.jpg'
-import Shampoo2 from './goods/2.jpg'
+import Shampoo2 from './goods/1.jpg'
 import cup1 from './goods/3.jpg'
 import cup2 from './goods/4.jpg'
 class Supmarket extends React.Component{

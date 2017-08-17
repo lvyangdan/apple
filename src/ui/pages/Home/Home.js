@@ -32,7 +32,6 @@ class Home extends React.Component{
 			<Link to='/tree'><img src={img} alt="apple"/></Link>
 			<div><button onClick={this.eat}>eat</button></div>
 			<div className='item'>
-				
 				<div><Link to='tree'>去采摘苹果</Link></div>
 
 			</div>

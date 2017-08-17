@@ -20,14 +20,10 @@ body{
 	width: 20%;
 	padding-left:30px;
 }
-.pages .item div{
-	display: flex;
-	justify-content: space-between;
-}
 .pages button{
 	line-height: 30px;
-	width: 400px;
-	display: block;
+	width: 200px;
+	background-color: #F50057;
 	margin:0 auto;
 	float:right;
 }
