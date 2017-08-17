@@ -1,6 +1,8 @@
 .goods{
-	width: 700px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 .goods img{
-	width: 350px;
+	width: 25%;
 }

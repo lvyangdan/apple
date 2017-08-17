@@ -24,9 +24,9 @@ body{
 	display: flex;
 	justify-content: space-between;
 }
-.pages .item div button{
-	line-height: 20px;
-	width: 100px;
+.pages button{
+	line-height: 30px;
+	width: 400px;
 	display: block;
 	margin:0 auto;
 	float:right;
